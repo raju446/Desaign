@@ -1,0 +1,99 @@
+:host{
+    --slds-c-card-color-background: linear-gradient(#3d80cd,#cf0000);
+}
+.slds-card{
+    background: linear-gradient(#2d7dc8,#cf0000);
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    min-height: 100vh;
+}
+
+.container{
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.container::before{
+    position: absolute;
+    content: '';
+    bottom: 0;
+    width: 100%;
+    height: 200px;
+    background: url(https://lh3.googleusercontent.com/u/0/d/1VNnZoEe15-lJIaMSsMFF9CnjidNVdcGS=w271-h257-p-k-nu-iv1);
+    z-index: 1;
+}
+
+.container .circle{
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 350px;
+    height: 350px;
+    background: white;
+    border-radius: 50%;
+}
+
+.container .circle::before{
+    content: '';
+    position: absolute;
+    inset: -200px -300px;
+    /* original image Link -https://img.freepik.com/premium-vector/silhouette-santa-claus-riding-reindeer-sleigh_1302-20405.jpg?w=1060 */
+    background: url(https://private-user-images.githubusercontent.com/98048199/290209408-798c9b9c-a32c-4163-a0f8-ea482f706b30.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTEiLCJleHAiOjE3MDI0NzU0ODEsIm5iZiI6MTcwMjQ3NTE4MSwicGF0aCI6Ii85ODA0ODE5OS8yOTAyMDk0MDgtNzk4YzliOWMtYTMyYy00MTYzLWEwZjgtZWE0ODJmNzA2YjMwLnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFJV05KWUFYNENTVkVINTNBJTJGMjAyMzEyMTMlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjMxMjEzVDEzNDYyMVomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPWQ1Yzc0NTFiZmFhYzk1M2FlNWI1MWJhMjU0ZDAyYTA0YTRjMGZhNWQ3MjdlYjE5YjEwZTU0MjU4YzYzOGJmYTcmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0JmFjdG9yX2lkPTAma2V5X2lkPTAmcmVwb19pZD0wIn0.e7pfJ1zk5rv9BCk0B5IGd20lbg1qfTy8OQC9v3yMZIM);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 600px;
+    animation: animate 5s ease-in-out infinite;
+}
+
+@keyframes animate {
+    0%,100%{
+        transform: translateY(-25px);
+    }
+    50%{
+        transform: translateY(25px);
+    }
+}
+
+.container .circle::after{
+    content: 'Happy Christmas 2023';
+    position: absolute;
+    inset: -125px -200px;
+    font-size: 4em;
+    font-family:'Times New Roman', Times, serif;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    color: white;
+}
+.container .snow{
+    position: relative;
+    display: flex;
+}
+.container .snow span{
+position: relative;
+min-width: 5px;
+height: 5px;
+background: white;
+border-radius: 50%;
+margin: 0 1vw;
+box-shadow: -100px 20px 5px white, 100px 20px 10px white;
+animation:  snowAnimate 15s linear infinite;
+animation-duration: calc(75s/var(--i));
+}
+
+.container .snow span::nth-child(even){
+ min-width: 10px;
+ height: 10px;
+}
+
+@keyframes snowAnimate {
+    0%{
+        transform: translateY(-10vh);
+    }
+    100%{
+        transform: translateY(100vh);
+    }
+}
